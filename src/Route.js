@@ -1,6 +1,7 @@
 
 
-import { BrowserRouter as Router,  Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Outlet} from "react-router-dom";
+import {  Route } from "react-router-dom";
 import Home from './component/home';
 import About from './component/about';
 import Product from './component/product';
