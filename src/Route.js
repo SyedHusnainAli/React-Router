@@ -1,6 +1,6 @@
 
 
-import { BrowserRouter as Router, Routes, Outlet} from "react-router-dom";
+import { BrowserRouter as Router, Routes,} from "react-router-dom";
 import {  Route } from "react-router-dom";
 import Home from './component/home';
 import About from './component/about';
@@ -16,7 +16,7 @@ function RouteConfig() {
     <Routes>
       
       <Route path='/' element={< Home />} />
-      <Route path='about' element={< About />} />
+      <Route path='/about' element={< About />} />
       <Route path='product' element={< Product />} />
       <Route path='productItems/:id' element={<ProductItems />} />
     </Routes>
