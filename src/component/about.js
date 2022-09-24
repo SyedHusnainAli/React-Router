@@ -1,12 +1,16 @@
 
+import React from 'react'
 
-function About() {
+
+
+
+function about() {
   return (
     <div>
-shoes!
-
-</div>
-  );
+     
+     <h2>About .js</h2>
+    </div>
+  )
+ 
 }
-
-export default About;
+export default about;

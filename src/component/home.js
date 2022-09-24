@@ -1,13 +1,20 @@
 
+import React from 'react'
+import { useParams } from 'react-router-dom';
+import Shoes from './../codes.json'
 
 
-function Home() {
+function home() {
+
+const { id } = useParams();
+const shoe = Shoes[id]
+console.log(shoe)
   return (
     <div>
- <h1>Home C js</h1>
-
-</div>
-  );
+     
+     <h2>home pages</h2>
+    </div>
+  )
+ 
 }
-
-export default Home;
+export default home;

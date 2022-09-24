@@ -1,29 +1,38 @@
 
+import React from 'react'
 
-import { BrowserRouter as Router, Routes,} from "react-router-dom";
-import {  Route } from "react-router-dom";
-import Home from './component/home';
-import About from './component/about';
-import Product from './component/product';
-import ProductItems from './component/productItems';
+import About from './component/about'
+import Home from './component/home'
 import Navbar from './component/navbar'
+import Product from './component/product'
+import {
+    BrowserRouter as Router,
+    
+    Route,
+    Routes,
 
-function RouteConfig() {
+  } from "react-router-dom";
+
+
+
+function routerManger() {
   return (
     <div>
- <Router>
- <Navbar />
-    <Routes>
-      
-      <Route path='/' element={< Home />} />
-      <Route path='/about' element={< About />} />
-      <Route path='product' element={< Product />} />
-      <Route path='productItems/:id' element={<ProductItems />} />
-    </Routes>
- </Router>
+     
+     <Router>
+      <Navbar />
+<Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/navbar/:id" element={< Navbar />} />
+          
+          </Routes>
 
-</div>
-  );
+        </Router>
+       
+    </div>
+  )
+ 
 }
-
-export default RouteConfig;
+export default  routerManger;

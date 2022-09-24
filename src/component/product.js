@@ -1,27 +1,26 @@
-import React from "react";
+
+import React from 'react'
 import Shoes from './../codes.json'
-import {Outlet} from 'react-router-dom'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-function Product() {
-  <h1>hye</h1>
-  //console.log(Object.entries(Shoes))
+
+function product() {
+
+
   return (
-    <div>
- <Outlet />
- <ul>
-  {Object.entries(Shoes).map(([slug, {name, img} ]) =>
-    <li key={slug}>
-       <Link to={`/about/${slug}`}>
-<h2>{name}</h2>
-<img src={img} alt={name} />
-</Link> 
-    </li>
-  )}
- </ul>
-
-</div>
-  );
+    <div className='productcontainer'>
+     {Object.keys(Shoes).map((keyName) =>{
+       const shoe = Shoes[keyName]
+       console.log(shoe)
+     return(
+       <Link key={keyName} className="link" to={`/home/${keyName}`}>
+       <h4>{shoe.name}</h4>
+       <img src={shoe.img} alt="imges" height={150} />
+       </Link>
+     )
+     })}
+    </div>
+  )
+ 
 }
-
-export default Product;
+export default product;
